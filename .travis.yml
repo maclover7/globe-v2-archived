@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "0.12"
+before_script:
+# EMBER DEPENDENCIES
+- export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
+- "npm config set spin false"
+- "npm install -g npm@^2"
+- npm install -g bower
+- cd ember
+- npm install
+- bower install
+# MISC DEPENDENCIES
+- rvm install 2.2.3
+- gem install rake
+script:
+# ACTUALLY RUN THE TESTS
+- "cd ../"
+- rake app:test
