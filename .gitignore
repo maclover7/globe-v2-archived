@@ -18,13 +18,13 @@
 ### RAILS
 
 # Ignore bundler config.
-/.bundle
+/ruby/.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
+/ruby/db/*.sqlite3
+/ruby/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-/log/*
-!/log/.keep
-/tmp
+/ruby/log/*
+/ruby/!log/.keep
+/ruby/tmp
