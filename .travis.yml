@@ -13,7 +13,7 @@ before_script:
 # MISC DEPENDENCIES
 - rvm install 2.2.3
 - gem install rake
-- cd ruby
+- cd "../ruby"
 - bundle install
 script:
 # ACTUALLY RUN THE TESTS
