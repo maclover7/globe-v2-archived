@@ -16,6 +16,17 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    torii: {
+      // a 'session' property will be injected on routes and controllers
+      sessionServiceName: 'session',
+      providers: {
+        'google-oauth2': {
+          apiKey:      '470989196474-91hfa2rjm4s408tojgkj9i2vv0jpcoji.apps.googleusercontent.com',
+          redirectUri: 'http://localhost:4200/login'
+        }
+      }
     }
   };
 
@@ -24,7 +35,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self'",
-      'connect-src': "'self'",
+      'connect-src': "'self' 'https://www.googleapis.com/",
       'img-src': "'self'",
       'style-src': "'self' 'unsafe-inline'",
       'media-src': "'self'"
