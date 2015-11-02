@@ -1,1 +1,9 @@
+{{#if hasGoogle}}
+  <p>Your are signed in!</p>
+{{else}}
+  <a href="#" {{action 'signInGoogle'}}>
+    Sign in with Google
+  </a>
+{{/if}}
+
 {{outlet}}
