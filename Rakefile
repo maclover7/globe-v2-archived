@@ -23,5 +23,8 @@ namespace :app do
     # Ember tests
     puts 'Testing Ember...'
     system "cd ember && ember test"
+    # Rails tests
+    puts 'Testing Rails...'
+    system "cd ruby && bundle exec rspec"
   end
 end
